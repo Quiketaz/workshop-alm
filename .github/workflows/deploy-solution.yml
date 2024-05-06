@@ -18,11 +18,10 @@ jobs:
         with:
           workflow: pack-solution.yml
           name: packed-solution
-      - uses: microsoft/powerplatform-actions/import-solution@v0
+      - uses: microsoft/powerplatform-actions/import-solution@v1
         with:
           environment-url: https://jflores-build.crm.dynamics.com/
           app-id: ${{ secrets.APPLICATIONID }}
           client-secret: ${{ secrets.SECRETKEY }}
           tenant-id: ${{ secrets.TENANT }}
           solution-file: contoso_university_core_managed.zip
-          

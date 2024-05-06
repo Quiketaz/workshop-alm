@@ -14,7 +14,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     environment: test
     steps:
-      - uses: dawidd6/action-download-artifact@v4
+      - uses: dawidd6/action-download-artifact@v3
         with:
           workflow: pack-solution.yml
           name: packed-solution
@@ -25,3 +25,4 @@ jobs:
           client-secret: ${{ secrets.SECRETKEY }}
           tenant-id: ${{ secrets.TENANT }}
           solution-file: contoso_university_core_managed.zip
+          
